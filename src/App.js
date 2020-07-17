@@ -1,25 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header  from './header/header';
+import Footer from './footer/footer';
+import InstagramFeed from './instagramFeed/instagramfeed';
+import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
+import Root from './Root/Root'
+import InstaPost from './InstaPost/InstaPost'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <Header/>
+     <InstagramFeed/>
+     <Footer/> */}
+     <Router history={browserHistory}>
+       <Route path={"/"} component={Root}>
+       <Route path={'login'} component={InstagramFeed}/>
+       <Route path={'post'} component={InstaPost} />
+       </Route>
+       </Router>
     </div>
+    
   );
 }
 
