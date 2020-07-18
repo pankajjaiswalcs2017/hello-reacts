@@ -5,6 +5,7 @@ import HeaderCss from '../header/header.css'
 import Search from '../search/search.js';
 import SearchLocation from '../search-location/search-location';
 import Grid from '@material-ui/core/Grid';
+import {Link} from 'react-router';
 
 
 class Header extends React.Component {
@@ -19,8 +20,8 @@ class Header extends React.Component {
 
                         </div>
                         <div className="Header-Links" xs={9}>
-                        <a href="login" >Login In</a>&nbsp;&nbsp;
-                        <a href="/" >Sign Up</a>
+                        <Link to={"/login"} >Login In</Link>&nbsp;&nbsp;
+                        <Link to={"/hello-reacts"}>Sign Up</Link>
                         </div>
                     </div>
 

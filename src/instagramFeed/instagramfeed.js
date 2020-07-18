@@ -6,8 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import instaform from '../instagramFeed/instagramfeed.css';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import Card from '../Card/card'
-import CardCss from '../Card/card.css'
+import {browserHistory} from 'react-router';
 
 
 const axios = require('axios');
@@ -31,6 +30,8 @@ class InstagramFeed extends React.Component {
 
     fetchFeed() {
         console.log('userName ' + this.state.userName)
+        browserHistory.push("/post");
+
         // Make a request for a user with a given ID
         axios.get('https://jsonplaceholder.typicode.com/todos/1')
             .then(function (response) {
@@ -62,7 +63,7 @@ class InstagramFeed extends React.Component {
                     }} />
                     <Box component="span" m={1}>
 
-                        <form action="post" className="instaform"  noValidate="false" autoComplete="off"  >
+                        <form className="instaform"  noValidate="false" autoComplete="off"  >
                             <h2 style={{ marginTop: "58%", marginLeft: "2%" }}>Instagram</h2>
                             <TextField id="outlined-basic" label="Instagram ID" variant="outlined" onChange={this.updateUserName.bind(this)} /><br /><br />
                             <br/><br/>
