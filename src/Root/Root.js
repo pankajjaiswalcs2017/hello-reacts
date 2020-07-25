@@ -1,8 +1,5 @@
-import Box from '@material-ui/core/Box';
 import React from 'react';
 import Container from '@material-ui/core/Container'
-import HeaderCss from '../header/header.css'
-import Grid from '@material-ui/core/Grid';
 import Header from '../header/header'
 import Footer from '../footer/footer'
 import {Row, Col } from 'react-grid-system';

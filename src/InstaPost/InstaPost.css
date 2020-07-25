@@ -3,26 +3,10 @@
     width: auto;
 }
 
-
-* {
-    box-sizing: border-box;
-  }
-  
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
   h2{
-    margin-top: 50%;
+    margin-top: 57%;
     color: darkgoldenrod;
 
   }
+
+  
